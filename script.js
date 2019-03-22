@@ -8,12 +8,13 @@ $(document).ready(function () {
         makeAccusation(); //calling the whole function that has the alert function nested within it and the click event 
 
         function makeAccusation() { //have to make sure each array can feed into the loop
+            var num = i
             var friendName = friends[i % 5]; // the amount of index positions in each array is smaller than how long the loop runs so you have to make the index positions reiterate using remainders of the length of the array
             var locationName = locations[i % 10];
             var weaponsName = weapons[i % 20];
 
             function alertAccusation() { //create an alert for each accusation
-                alert("Accusation " + i + " : I accuse " + friendName + " with the " + weaponsName + " in the " + locationName + " ! ")
+                alert("Accusation " + num + " : I accuse " + friendName + " with the " + weaponsName + " in the " + locationName + " ! ")
             }
             return heading3.click(alertAccusation) //return the click event that takes in the alert function
         }
